@@ -1,0 +1,99 @@
+html{
+  --gap: 1.5rem;
+  --color10:#010d28;
+  --color8: #001642;
+  --color6: #00348f;
+  --color4: #0063cc;
+  --color2: #059bff;
+  --color1:#75d6ff;
+}
+body,form, h1, label,main, input{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background: linear-gradient(var(--color10), var(--color8));
+  font-family: 'Raleway', sans-serif;
+}
+.container{
+  margin: var(--gap) auto;
+  padding: var(--gap);
+}
+.form{
+  background-color: var(--color8);
+  max-width: 600px;
+  padding: var(--gap);
+  margin: calc(var(--gap)) auto;
+  border-radius: 0.4rem;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  font-weight: 500;
+}
+.form h1{
+  color: var(--color1);
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3rem;
+  margin: var(--gap);
+}
+.form label{
+  margin-top: var(--gap);
+  margin-bottom: calc(var(--gap)/2);
+  color: var(--color1);
+}
+.form input {
+  padding: calc(var(--gap)/3);
+  border-radius: 0.4rem;
+  border: 3px solid var(--color1);
+  box-shadow: 0 0 0 2px var(--color2);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color8);
+  transition: border 0.3s ease-in-out;
+}
+.form input:focus, .form input:hover {
+  border: 3px solid var(--color4);
+  box-shadow: 0 0 0 2px var(--color2);
+}
+
+#signup, #signin {
+  border: none;
+  box-shadow: none;
+  margin-top: calc(var(--gap));
+  padding: calc(var(--gap)/2);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+#signup{
+  background-image: linear-gradient(var(--color6), var(--color4));
+}
+#signin{
+  background: linear-gradient(var(--color2), var(--color4));
+}
+#signup:hover{
+  background-image: linear-gradient(var(--color4), var(--color6));
+}
+#signin:hover{
+  background: linear-gradient(var(--color4), var(--color2));
+}
+
+#forgotPass{
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  color: #fff;
+  padding: calc(var(--gap)/2);
+}
+#forgotPass:hover{
+  color: var(--color2);
+  text-decoration: underline;
+  cursor: pointer;
+}
